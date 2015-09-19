@@ -1,4 +1,4 @@
-package types;
+package com.unicorntoast.encoding.value.types;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
