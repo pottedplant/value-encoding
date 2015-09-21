@@ -25,13 +25,13 @@ public class FixedLengthEncoding {
 	public String encode(byte[] bytes) {
 		Verify.notNull(bytes);
 		Verify.verify(bytes.length==this.bytes);
-		return encoding.encode(bytes).toString();
+		return encoding.encode(bytes,symbols).toString();
 	}
 
 	public byte[] decode(String value) {
 		char[] chars = Verify.notNull(value).toCharArray();
 		Verify.verify(chars.length==symbols);
-		return encoding.decode(chars);
+		return encoding.decode(chars,bytes);
 	}
 
 	public String encode(String value) { return encode(Verify.notNull(value).getBytes(Charsets.utf8)); }
