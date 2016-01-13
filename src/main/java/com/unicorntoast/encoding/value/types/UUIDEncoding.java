@@ -30,7 +30,7 @@ public class UUIDEncoding {
 	}
 
 	public String encode(UUID value) {
-		return encoding.encode(bytes(Verify.notNull(value))).toString();
+		return encoding.encode(bytes(Verify.notNull(value)),symbols).toString();
 	}
 
 	public UUID decode(String value) {
